@@ -104,8 +104,9 @@ void moveOddItemsToBack(LinkedList *ll)
 	while(size > index){
 		if (cur->item % 2 == 1){
 			input = cur;
-			insertNode(ll, ll->size, cur->item);
 			cur = cur->next;
+			
+			insertNode(ll, ll->size, cur->item);
 			removeNode(ll, index);
 			index ++;
 			
